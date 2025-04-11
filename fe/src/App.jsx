@@ -2,8 +2,9 @@ import { LiveKitRoom, VideoConference } from "@livekit/components-react";
 import "@livekit/components-styles"; // Required styles
 import { useEffect, useState } from "react";
 
-const LIVEKIT_URL = "wss://dating-app-ue8mqe8m.livekit.cloud"; // Cloud or self-hosted
-const BACKEND_URL = "http://localhost:3000/livestream";
+const LIVEKIT_URL = import.meta.env.VITE_LIVEKIT_URL;
+const BACKEND_URL =
+  import.meta.env.VITE_BACKEND_URL || "http://localhost:3000/livestream";
 
 function App() {
   const [token, setToken] = useState(null);
