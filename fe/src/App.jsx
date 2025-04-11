@@ -47,7 +47,7 @@ function App() {
     <div style={{ height: "100vh", fontFamily: "Arial, sans-serif" }}>
       {!hasJoined ? (
         <div style={{ maxWidth: "500px", margin: "0 auto", padding: "20px" }}>
-          <h1 style={{ textAlign: "center" }}>Join LiveKit Stream</h1>
+          <h1 style={{ textAlign: "center" }}>Livestream</h1>
           <form
             onSubmit={handleJoin}
             style={{ display: "flex", flexDirection: "column", gap: "16px" }}
@@ -61,7 +61,7 @@ function App() {
                   fontWeight: "bold",
                 }}
               >
-                Username:
+                Tên hiển thị:
               </label>
               <input
                 type="text"
@@ -87,7 +87,7 @@ function App() {
                   fontWeight: "bold",
                 }}
               >
-                Room Name:
+                ID Phòng:
               </label>
               <input
                 type="text"
@@ -114,7 +114,7 @@ function App() {
                   checked={enableVideo}
                   onChange={(e) => setEnableVideo(e.target.checked)}
                 />
-                <label htmlFor="enableVideo">Enable Camera</label>
+                <label htmlFor="enableVideo">Bật Camera</label>
               </div>
 
               <div
@@ -126,7 +126,7 @@ function App() {
                   checked={enableAudio}
                   onChange={(e) => setEnableAudio(e.target.checked)}
                 />
-                <label htmlFor="enableAudio">Enable Microphone</label>
+                <label htmlFor="enableAudio">Tắt Camera</label>
               </div>
             </div>
 
@@ -159,7 +159,7 @@ function App() {
         >
           <div style={{ padding: "16px", borderBottom: "1px solid #eaeaea" }}>
             <h1 style={{ textAlign: "center", margin: "0 0 16px" }}>
-              LiveKit Room: {roomName}
+              Phòng: {roomName}
             </h1>
             <div style={{ display: "flex", justifyContent: "center" }}>
               <button
@@ -173,7 +173,7 @@ function App() {
                   cursor: "pointer",
                 }}
               >
-                Leave Room
+                Rời
               </button>
             </div>
           </div>
